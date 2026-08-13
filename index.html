@@ -1,276 +1,90 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>V R Vikash | Portfolio</title>
-  <meta name="description" content="Portfolio of V R Vikash, AI and Data Science student." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="noise" aria-hidden="true"></div>
-  <header class="site-header">
-    <div class="brand">V R VIKASH</div>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="V R Vikash — hand-drawn AI and software portfolio."><title>V R Vikash — Sketchbook Portfolio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Patrick+Hand&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><style>
+:root{--paper:#fdfbf7;--ink:#2d2d2d;--old:#e5e0d8;--red:#ff4d4d;--blue:#2d5da1;--yellow:#fff9c4;--pad:clamp(1.3rem,5vw,5rem);--wobble:255px 15px 225px 15px / 15px 225px 15px 255px;--wobble-md:35px 255px 25px 225px / 225px 25px 255px 35px;--shadow:4px 4px 0 var(--ink)}/* Custom hand-drawn scrollbar */
+html{
+  scrollbar-width:thin;
+  scrollbar-color:var(--ink) var(--paper);
+}
+html::-webkit-scrollbar{
+  width:14px;
+}
+html::-webkit-scrollbar-track{
+  background:var(--paper);
+  border-left:2px solid var(--old);
+}
+html::-webkit-scrollbar-thumb{
+  background:var(--ink);
+  border:3px solid var(--paper);
+  border-radius:999px;
+  min-height:70px;
+  box-shadow:2px 0 0 var(--old);
+}
+html::-webkit-scrollbar-thumb:hover{
+  background:var(--blue);
+}
+html::-webkit-scrollbar-button{
+  display:none;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background-color:var(--paper);background-image:radial-gradient(var(--old) 1px,transparent 1px);background-size:24px 24px;color:var(--ink);font:400 20px/1.45 'Patrick Hand',cursive}a{color:inherit;text-underline-offset:4px}button{font:inherit}::selection{background:var(--red);color:#fff}.page{max-width:1280px;margin:auto;overflow:hidden}.skip{position:absolute;top:0;left:0;z-index:10;background:var(--ink);color:#fff;padding:.7rem 1rem;transform:translateY(-120%);font:700 .7rem 'Space Mono',monospace}.skip:focus{transform:none}.label,.mono{font:700 .66rem 'Space Mono',monospace;letter-spacing:.1em;text-transform:uppercase}.site-header{padding:1rem var(--pad);display:flex;justify-content:space-between;align-items:center}.brand{font:700 1.5rem Kalam,cursive;text-decoration:none;transform:rotate(-1deg)}.brand span{display:inline-grid;place-items:center;width:25px;height:25px;margin-right:.35rem;border:2px solid var(--ink);border-radius:48% 52% 45% 55% / 55% 45% 55% 45%;background:var(--yellow)}nav{display:flex;gap:1.3rem}nav a{font-size:1.05rem;text-decoration:none}nav a:hover{text-decoration:line-through;color:var(--red)}.menu{display:none;border:2px solid var(--ink);border-radius:44% 56% 48% 52% / 55% 43% 57% 45%;background:var(--yellow);padding:.35rem .8rem;box-shadow:3px 3px 0 var(--ink)}
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(380px,.98fr);align-items:center;gap:clamp(2rem,5vw,5.5rem);padding:clamp(2rem,4vh,3.5rem) var(--pad) 4.5rem;min-height:calc(100vh - 78px);max-width:1280px;margin:0 auto}.hero-copy{position:relative;z-index:2;padding:0;min-width:0}.hero h1{margin:.6rem 0 1.35rem;font:700 clamp(4.2rem,7.8vw,8rem)/.84 Kalam,cursive;letter-spacing:-.075em;transform:rotate(-1deg)}.useful-line{white-space:nowrap}.bang{display:inline-block;color:var(--red);transform:rotate(14deg);margin-left:.02em}.lead{max-width:500px;margin:0;font-size:clamp(1.15rem,1.55vw,1.38rem);line-height:1.42}.actions{position:relative;display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;margin-top:2rem}.button{min-height:52px;padding:.65rem 1.25rem;border:3px solid var(--ink);border-radius:var(--wobble);box-shadow:var(--shadow);display:inline-flex;align-items:center;justify-content:center;font-size:1rem;text-decoration:none;transition:all .1s linear}.button:hover{background:var(--red);color:#fff;transform:translate(2px,2px) rotate(-1deg);box-shadow:2px 2px 0 var(--ink)}.button:active{transform:translate(4px,4px);box-shadow:none}.button.secondary{background:var(--old)}.button.secondary:hover{background:var(--blue)}.hero-art{position:relative;align-self:center;justify-self:center;width:min(100%,540px);aspect-ratio:1/1;min-height:0;overflow:visible;transform:rotate(1deg)}.hero-art svg{display:block;width:100%;height:100%;overflow:visible}.hero-art .art-main{fill:var(--yellow);stroke:var(--ink);stroke-width:4;stroke-linejoin:round}.hero-art .art-shadow{fill:none;stroke:var(--ink);stroke-width:8;stroke-linecap:round;stroke-linejoin:round}.hero-art .art-red{fill:var(--red);stroke:var(--ink);stroke-width:4}.hero-art .art-paper{fill:var(--paper);stroke:var(--ink);stroke-width:3;stroke-dasharray:7 6}.hero-art .art-blue{stroke:var(--blue);fill:none;stroke-width:4;stroke-linecap:round}.hero-art .art-blue-fill{fill:var(--blue)}.hero-art .art-red-fill{fill:var(--red)}.hero-art .tape-shape{fill:#c7c5baaa}.hero-art .art-note{font:700 44px Kalam,cursive;fill:var(--blue)}.hero-art .art-spark{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round}.hero-foot{margin:1.45rem 0 0}
+section{padding:clamp(4.5rem,9vw,8rem) var(--pad)}.section-head{display:grid;grid-template-columns:1fr 3fr;gap:2rem;margin-bottom:3rem}.section-head h2,.experience h2,.about h2,.contact h2{margin:.5rem 0 0;font:700 clamp(3rem,6vw,6rem)/.88 Kalam,cursive;letter-spacing:-.06em}.sticky{display:inline-block;padding:.35rem .8rem;background:var(--yellow);border:2px solid var(--ink);border-radius:48% 52% 45% 55% / 55% 45% 55% 45%;box-shadow:3px 3px 0 var(--ink);transform:rotate(-2deg)}.projects{background:#f1eee8;border-top:3px dashed var(--ink);border-bottom:3px dashed var(--ink)}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.4rem 2rem;align-items:start}.card{position:relative;min-height:310px;padding:1.5rem;border:3px solid var(--ink);border-radius:var(--wobble-md);background:#fff;box-shadow:var(--shadow);display:flex;flex-direction:column;isolation:isolate;transition:transform .1s linear,box-shadow .1s linear}.card:nth-child(3n+1){transform:rotate(-1.1deg)}.card:nth-child(3n+2){background:var(--yellow);transform:rotate(1.15deg)}.card:nth-child(3n+3){transform:rotate(-.65deg)}.card:hover{transform:translateY(-5px) rotate(-1deg);box-shadow:7px 7px 0 var(--ink)}.card:nth-child(3n+2):hover{transform:translateY(-5px) rotate(1.8deg)}.card:nth-child(3n+3):hover{transform:translateY(-5px) rotate(-1.4deg)}.card-num{font:700 .62rem 'Space Mono',monospace;letter-spacing:.06em;color:var(--blue)}.card h3{margin:2.4rem 0 .9rem;font:700 1.7rem/.96 Kalam,cursive}.card p{font-size:1rem;max-width:95%;line-height:1.42}.tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:auto;align-items:center}.tag{padding:.2rem .45rem;background:var(--old);border:1.5px solid var(--ink);border-radius:51% 49% 47% 53% / 42% 57% 43% 58%;font:700 .54rem 'Space Mono',monospace;text-transform:uppercase}.card .tape{top:-13px;left:50%;width:74px;height:23px;transform:translateX(-50%) rotate(-5deg)}.card:nth-child(3n+1) .tape{background:#c7c5baaa}.card:nth-child(3n+2) .tape{background:#ff6b5f88;transform:translateX(-50%) rotate(-3deg)}.card:nth-child(3n+3) .tape{background:#2d5da177;transform:translateX(-50%) rotate(-6deg)}
+.stats{padding-top:3rem;padding-bottom:3rem;background:var(--blue);color:#fff;transform:rotate(-.4deg) scale(1.01)}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.stat{min-height:165px;padding:1.6rem 1.3rem 1.6rem 2.25rem;border:3px solid #fff;border-radius:48% 52% 42% 58% / 55% 38% 62% 45%;display:flex;flex-direction:column;justify-content:center;gap:.9rem}.stat:nth-child(2){border-radius:55% 45% 62% 38% / 43% 56% 44% 57%;transform:rotate(2deg)}.stat:nth-child(3){border-radius:43% 57% 36% 64% / 57% 43% 57% 43%;transform:rotate(-1deg)}.stat b{font:700 clamp(3rem,5.4vw,5.2rem)/.8 Kalam,cursive}.stat span{font:700 .6rem 'Space Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.experience{display:grid;grid-template-columns:5fr 7fr;gap:clamp(2rem,7vw,7rem)}.experience .intro{padding-top:1rem}.roles{border-top:2px dashed var(--ink)}.role{padding:2rem 0;border-bottom:2px dashed var(--ink)}.role-top{display:flex;justify-content:space-between;gap:1rem}.role h3{margin:0;font:700 clamp(1.35rem,2.4vw,2rem)/1 Kalam,cursive}.role time{font:700 .61rem 'Space Mono',monospace;white-space:nowrap}.quote{position:relative;background:var(--yellow);text-align:center;overflow:hidden}.quote:before{content:'"';position:absolute;top:-.45em;left:7%;font:700 15rem Kalam,cursive;color:var(--red);opacity:.3}.quote p{position:relative;z-index:1;max-width:880px;margin:auto;font:700 clamp(2.2rem,5vw,5rem)/.96 Kalam,cursive;transform:rotate(-1deg)}.quote footer{margin-top:1.8rem;font:700 .63rem 'Space Mono',monospace;letter-spacing:.08em;text-transform:uppercase}.about{display:grid;grid-template-columns:7fr 5fr;gap:clamp(2rem,7vw,7rem);align-items:center}.about p{font-size:1.18rem}.about h2{margin:0 0 1.7rem}.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:2rem}.skill{padding:.55rem .75rem;border:2px solid var(--ink);border-radius:47% 53% 55% 45% / 49% 44% 56% 51%;background:#fff;box-shadow:2px 2px 0 var(--ink);font:700 1rem Kalam,cursive;display:flex;align-items:center;justify-content:center;text-align:center;min-height:46px;width:100%}.skill:nth-child(even){transform:rotate(1deg)}.about-art{position:relative;min-height:430px;border:3px solid var(--ink);border-radius:54% 46% 38% 62% / 48% 56% 44% 52%;background:var(--old);box-shadow:8px 8px 0 var(--ink);transform:rotate(2deg);overflow:hidden}.about-art:before{content:'✦';position:absolute;left:20%;top:12%;font:700 9rem Kalam,cursive;color:var(--red);transform:rotate(-18deg)}.about-art:after{content:'';position:absolute;width:230px;height:230px;right:-45px;bottom:-45px;border:3px dashed var(--ink);border-radius:48% 52% 57% 43% / 45% 55% 45% 55%;background:var(--yellow)}.contact{position:relative;background:var(--ink);color:var(--paper);display:grid;grid-template-columns:7fr 5fr;gap:3rem;overflow:hidden}.contact h2{position:relative;z-index:1;margin:0 0 2rem}.email{position:relative;z-index:1;font:700 clamp(.92rem,1.5vw,1.35rem) 'Space Mono',monospace;overflow-wrap:anywhere}.contact-side{position:relative;z-index:1;padding-top:1rem}.socials{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}.socials a{color:var(--paper);font:400 1.2rem Kalam,cursive}.socials a:hover{text-decoration:line-through;color:var(--red)}.footer{padding:1rem var(--pad);display:flex;justify-content:space-between;font:700 .6rem 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase}.to-top{border:0;background:none;color:var(--ink);font:inherit;text-decoration:underline;cursor:pointer}:focus-visible{outline:3px solid var(--blue);outline-offset:3px}@media(max-width:980px){nav{display:none}.menu{display:block}.hero,.experience,.about,.contact{grid-template-columns:1fr}.hero{min-height:auto;padding-top:2.5rem;padding-bottom:4.5rem;gap:3rem}.hero-copy{max-width:680px}.hero-art{width:min(88vw,560px);justify-self:center}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.section-head{grid-template-columns:1fr}.contact-side{border-top:2px dashed #ffffff88}.about-art{max-width:560px}.arrow-note{display:none}}@media(max-width:620px){body{font-size:18px}.site-header{padding-top:.8rem;padding-bottom:.8rem}.hero{padding-top:1.5rem;gap:2.5rem}.hero h1{font-size:clamp(3.55rem,16.5vw,5.2rem);letter-spacing:-.08em}.cards{grid-template-columns:1fr}.card,.card:nth-child(3n+2),.card:nth-child(3n+3),.card:hover{transform:rotate(0)}.stats-grid{grid-template-columns:repeat(2,1fr)}.stats{padding-top:2rem;padding-bottom:2rem}.stat{min-height:130px}.role-top{flex-direction:column;gap:.55rem}.skills{grid-template-columns:1fr}.hero-art{width:100%;max-width:500px;transform:rotate(1deg)}.footer{flex-wrap:wrap;gap:.5rem}.footer span:nth-child(2){display:none}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style></head><body><a class="skip" href="#main">Skip to content</a><main class="page" id="main"><header class="site-header"><a class="brand" href="#top"><span>V</span>R Vikash</a><nav aria-label="Primary"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#about">About</a><a href="#contact">Contact</a></nav><button class="menu" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Contact</button></header>
+<section class="hero" id="top"><div class="hero-copy"><p class="label">Portfolio / AI + Software / 2026</p><h1>Making smart<br>things<br><span class="useful-line">feel useful <span class="bang">!</span></span></h1><p class="lead">AI and Data Science student building practical, human-centered software with machine learning, computer vision, and a little healthy curiosity.</p><div class="actions"><a class="button" href="#projects">See my projects →</a><a class="button secondary" href="#contact">Say hello</a></div><p class="hero-foot label">Coimbatore, Tamil Nadu / CIET / 2022—2026</p></div><div class="hero-art" aria-hidden="true">
+<svg viewBox="0 0 560 560">
+  <!-- Main paper-like shape -->
+  <path class="art-shadow" d="M126 467 C190 507 336 520 431 486 C487 466 505 415 505 334 C505 242 489 157 432 112 C363 57 241 56 150 89 C83 114 54 172 54 270 C54 362 70 432 126 467 Z"/>
+  <path class="art-main" d="M120 456 C184 494 328 507 420 476 C468 460 489 410 490 333 C492 244 476 171 422 128 C355 74 242 74 157 101 C94 121 68 176 68 268 C68 352 76 423 120 456 Z"/>
 
-  <main>
-    <section class="hero reveal">
-      <p class="eyebrow">Portfolio / AI + Software</p>
-      <h1>AI and Data Science student building practical, user-centered software.</h1>
-      <p class="lead">
-        Focused on machine learning, computer vision, and product-minded development.
-        Currently pursuing a Bachelor&apos;s in Artificial Intelligence and Data Science at
-        Coimbatore Institute of Engineering and Technology (2022 - 2026).
-      </p>
-      <div class="quick-meta">
-        <p>Coimbatore, Tamil Nadu</p>
-        <p>Programmer | AI/ML Intern Profile</p>
-      </div>
-      <a class="cta" href="#projects">View Projects</a>
-    </section>
+  <!-- Tape -->
+  <path class="tape-shape" d="M234 80 L326 76 L330 106 L237 110 Z" transform="rotate(-4 282 93)"/>
 
-    <section id="projects" class="work">
-      <div class="section-head reveal">
-        <p class="eyebrow">Selected Projects</p>
-      </div>
+  <!-- Small red dot / accent, kept outside the main composition -->
+  <circle class="art-red-fill" cx="70" cy="168" r="12" stroke="var(--ink)" stroke-width="3"/>
+  <path class="art-spark" d="M76 144 l4 -15 M58 150 l-12 -8 M88 154 l13 -6"/>
 
-      <article class="project reveal">
-        <div>
-          <h2>Smart Surveillance System</h2>
-          <p>
-            AI-powered surveillance system for real-time accident detection using mobile camera
-            input and sensor data. Automatically detects road accidents and triggers alerts to
-            authorities and emergency contacts via calls and SMS.
-          </p>
-          <p class="dates">Jan 2025 - Mar 2025</p>
-          <p class="stack">Python | Computer Vision | Deep Learning | Mobile Sensors | APIs</p>
-        </div>
-        <p class="meta">AI / Accident Detection</p>
-      </article>
+  <!-- Red shape: upper-right, fully contained and separated -->
+  <path class="art-red" d="M302 142 C354 125 412 140 432 180 C451 218 451 276 429 304 C405 335 351 343 307 331 C269 321 247 290 247 246 C247 199 259 157 302 142 Z"/>
 
-      <article class="project reveal">
-        <div>
-          <h2>Deepfake Detection System</h2>
-          <p>
-            Built a deep learning-based system to identify manipulated videos and images.
-            Implemented model training, evaluation, and a user-facing interface for real-time
-            deepfake detection.
-          </p>
-          <p class="dates">Apr 2023 - May 2023</p>
-          <p class="stack">Python | CNNs | Deep Learning | OpenCV | Flask</p>
-        </div>
-        <p class="meta">Vision / Media Forensics</p>
-      </article>
+  <!-- White circle: lower-left, separated from red shape -->
+  <circle class="art-paper" cx="174" cy="360" r="76"/>
 
-      <article class="project reveal">
-        <div>
-          <h2>HR AI Automation (ATS System)</h2>
-          <p>
-            AI-powered ATS that automates resume screening, candidate scoring, shortlisting,
-            and rejection based on job descriptions and skill matching. Includes admin dashboard,
-            analytics, and scoring rules.
-          </p>
-          <p class="stack">Node.js | Python | NLP | PostgreSQL | React | REST APIs</p>
-        </div>
-        <p class="meta">HR Tech / ATS</p>
-      </article>
+  <!-- Blue diagonal line, contained in the two-shape area -->
+  <path class="art-blue" d="M101 397 L405 224"/>
 
-      <article class="project reveal">
-        <div>
-          <h2>DocAI - AI Document Assistant</h2>
-          <p>
-            Built an AI-based document processing system that extracts, analyzes, and summarizes
-            information from PDFs and resumes for ATS workflows and intelligent querying.
-          </p>
-          <p class="stack">Python | NLP | OCR | LLM APIs | Vector Search</p>
-        </div>
-        <p class="meta">Documents / AI</p>
-      </article>
+  <!-- Small blue/red marks, placed in open lower-right area -->
+  <circle class="art-blue-fill" cx="414" cy="370" r="5"/>
+  <circle class="art-red-fill" cx="433" cy="357" r="4"/>
+  <circle class="art-blue-fill" cx="396" cy="388" r="4"/>
 
-      <article class="project reveal">
-        <div>
-          <h2>Vybe - Music-Based Social App</h2>
-          <p>
-            Music-integrated social app with profile matching, chat, and Spotify API integration.
-            Connects users through music preferences and supports social interactions.
-          </p>
-          <p class="stack">Flutter | Supabase | Spotify API | Real-time Chat</p>
-        </div>
-        <p class="meta">Social / Mobile</p>
-      </article>
+  <!-- Question mark, outside the main blob to avoid overlap -->
+  <path class="art-blue" d="M474 412 C490 394 497 382 507 369"/>
+  <path class="art-blue" d="M489 430 C501 418 508 411 516 402"/>
+  <circle class="art-blue-fill" cx="470" cy="419" r="6"/>
+  <text class="art-note" x="504" y="452" transform="rotate(10 504 452)">?</text>
 
-      <article class="project reveal">
-        <div>
-          <h2>Echofy - Voice Chat (Low RAM Optimized)</h2>
-          <p>
-            Lightweight real-time voice chat application optimized for low-RAM systems with
-            efficient audio streaming and smooth communication on low-end devices.
-          </p>
-          <p class="stack">Python | WebSockets | Audio Streaming | Networking</p>
-        </div>
-        <p class="meta">Voice / Performance</p>
-      </article>
+  <!-- Tiny accent marks on the opposite side -->
+  <path class="art-spark" d="M445 142 l9 -8 M460 158 l12 2 M440 160 l-2 13"/>
+</svg>
+</div></section>
+<section class="projects" id="projects"><div class="section-head"><p><span class="sticky label">My sketchbook</span></p><div><h2>Projects I’ve<br><em>made real.</em></h2><p>A collection of experiments, systems and tools built to meet real problems with thoughtful technology.</p></div></div><div class="cards">
+<article class="card"><span class="tape"></span><span class="card-num">01 / AI — SAFETY</span><h3>Smart Surveillance System</h3><p>Real-time accident detection from mobile camera input and sensor data, with automatic emergency alerts.</p><div class="tags"><i class="tag">Python</i><i class="tag">Computer Vision</i><i class="tag">Deep Learning</i></div></article><article class="card"><span class="tape"></span><span class="card-num">02 / MEDIA FORENSICS</span><h3>Deepfake Detection System</h3><p>Deep learning system for identifying manipulated video and imagery with real-time user feedback.</p><div class="tags"><i class="tag">Python</i><i class="tag">CNNs</i><i class="tag">OpenCV</i></div></article><article class="card"><span class="tape"></span><span class="card-num">03 / HR TECH</span><h3>HR AI Automation</h3><p>ATS workflow for resume screening, candidate scoring, shortlisting and decision support.</p><div class="tags"><i class="tag">Node.js</i><i class="tag">NLP</i><i class="tag">React</i></div></article><article class="card"><span class="tape"></span><span class="card-num">04 / DOCUMENTS</span><h3>DocAI</h3><p>Assistant that extracts, analyzes and summarizes PDFs and resumes for intelligent querying.</p><div class="tags"><i class="tag">OCR</i><i class="tag">LLM APIs</i><i class="tag">Vector Search</i></div></article><article class="card"><span class="tape"></span><span class="card-num">05 / SOCIAL MOBILE</span><h3>Vybe</h3><p>Music-based social app with profile matching, chat and Spotify API integration.</p><div class="tags"><i class="tag">Flutter</i><i class="tag">Supabase</i><i class="tag">Spotify</i></div></article><article class="card"><span class="tape"></span><span class="card-num">06 / PERFORMANCE</span><h3>Echofy</h3><p>Low-RAM real-time voice chat with efficient audio streaming for lower-end devices.</p><div class="tags"><i class="tag">WebSockets</i><i class="tag">Audio</i><i class="tag">Python</i></div></article><article class="card"><span class="tape"></span><span class="card-num">07 / AUTOMATION</span><h3>Clara</h3><p>Personal AI assistant for chat, task automation and modular API integrations.</p><div class="tags"><i class="tag">Python</i><i class="tag">NLP</i><i class="tag">APIs</i></div></article><article class="card"><span class="tape"></span><span class="card-num">08 / HEALTHCARE</span><h3>MediMind AI</h3><p>Medical data processing and intelligent recommendation support for healthcare decisions.</p><div class="tags"><i class="tag">Python</i><i class="tag">Machine Learning</i></div></article><article class="card"><span class="tape"></span><span class="card-num">09 / INFRASTRUCTURE</span><h3>Multi-GPU Training</h3><p>Distributed deep learning setup designed to improve compute efficiency and training speed.</p><div class="tags"><i class="tag">PyTorch</i><i class="tag">CUDA</i></div></article><article class="card"><span class="tape"></span><span class="card-num">10 / DEV TOOLS</span><h3>Code Comment Generator</h3><p>AI-powered tool that generates meaningful source code comments for clearer documentation.</p><div class="tags"><i class="tag">Python</i><i class="tag">LLM APIs</i></div></article><article class="card"><span class="tape"></span><span class="card-num">11 / ALERTS</span><h3>NotifyBot</h3><p>Automated alert and reminder bot integrated with messaging APIs.</p><div class="tags"><i class="tag">Python</i><i class="tag">Automation</i></div></article><article class="card"><span class="tape"></span><span class="card-num">12 / GRAPHICS</span><h3>Curved Surface Mapping</h3><p>Mathematical texture mapping experiment for curved 3D surfaces.</p><div class="tags"><i class="tag">Math</i><i class="tag">Geometry</i><i class="tag">Graphics</i></div></article></div></section>
+<section class="stats"><div class="stats-grid"><div class="stat"><b>12</b><span>Projects made</span></div><div class="stat"><b>03</b><span>Core areas</span></div><div class="stat"><b>02</b><span>Internships</span></div><div class="stat"><b>26</b><span>Degree finish</span></div></div></section>
+<section class="experience" id="experience"><div class="intro"><p class="label">Work notes / experience</p><h2>Learning<br>by <em>doing</em><br>the work.</h2></div><div class="roles"><article class="role"><div class="role-top"><h3>Data Science Intern — Lumous Global Ventures</h3><time>Nov 2025 — Present</time></div><p>Working on data science projects and analytics for global ventures, applying machine learning and statistical analysis to business problems.</p></article><article class="role"><div class="role-top"><h3>Machine Learning Intern — Cognifyz Technologies</h3><time>Nov 2024 — Jan 2025</time></div><p>Built and optimized ML models using Python, TensorFlow and Scikit-learn, across preprocessing, feature engineering, tuning and evaluation.</p></article></div></section>
+<section class="quote"><p>Technology is at its best when it helps someone do a real thing with a little less friction.</p><footer>V R Vikash / a note to self</footer></section>
+<section class="about" id="about"><div><p class="label">About me</p><h2>A curious<br>mind with<br><em>markers.</em></h2><p>I'm an AI and Data Science student with experience across game development, software engineering and applied AI. I like building smart applications through practical technical solutions.</p><div class="skills"><b class="skill">Data Science</b><b class="skill">Artificial Intelligence</b><b class="skill">Python Programming</b><b class="skill">Machine Learning</b><b class="skill">Flutter Development</b><b class="skill">Full Stack Development</b></div></div><div class="about-art" aria-hidden="true"></div></section>
+<section class="contact" id="contact"><div><p class="label">Open to AI / ML + Software opportunities</p><h2>Let’s make<br>something<br><em>good.</em></h2><a class="email" href="mailto:vikashvadivel1024@gmail.com">vikashvadivel1024@gmail.com</a><p class="mono">+91 9486831712</p></div><div class="contact-side"><p>Available for practical, technically ambitious work.</p><div class="socials"><a href="https://www.linkedin.com/in/vikash-vr" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/vikashvr1024" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></section><footer class="footer"><span>© 2026 V R Vikash</span><span>Coimbatore / Tamil Nadu</span><button class="to-top" type="button" id="backToTop" aria-label="Back to top">Back to top ↑</button></footer></main><script>
+document.addEventListener('DOMContentLoaded', function () {
+  const backToTop = document.getElementById('backToTop');
+  if (!backToTop) return;
 
-      <article class="project reveal">
-        <div>
-          <h2>Clara - AI Assistant</h2>
-          <p>
-            Developed a personal AI assistant for chat-based interactions, task automation,
-            and API integrations with a modular architecture for extending tools and skills.
-          </p>
-          <p class="stack">Python | APIs | NLP | Task Automation</p>
-        </div>
-        <p class="meta">Assistant / Automation</p>
-      </article>
-
-      <article class="project reveal">
-        <div>
-          <h2>MediMind AI</h2>
-          <p>
-            Healthcare-focused AI system for medical data processing, symptom analysis, and
-            intelligent recommendations to support healthcare decision-making.
-          </p>
-          <p class="stack">Python | Machine Learning | Healthcare AI</p>
-        </div>
-        <p class="meta">Healthcare / AI</p>
-      </article>
-
-      <article class="project reveal">
-        <div>
-          <h2>Multi-GPU Training</h2>
-          <p>
-            Distributed training setup for deep learning models using multi-GPU configuration
-            to speed up large-scale training and improve compute efficiency.
-          </p>
-          <p class="stack">PyTorch | CUDA | Distributed Training</p>
-        </div>
-        <p class="meta">Infra / Deep Learning</p>
-      </article>
-
-      <article class="project reveal">
-        <div>
-          <h2>Code Comment Generator</h2>
-          <p>
-            AI-powered tool that automatically generates meaningful comments for source code
-            to improve readability and documentation quality.
-          </p>
-          <p class="stack">Python | NLP | LLM APIs</p>
-        </div>
-        <p class="meta">Developer Tools</p>
-      </article>
-
-      <article class="project reveal">
-        <div>
-          <h2>NotifyBot</h2>
-          <p>
-            Automated notification bot for alerts and reminders integrated with messaging APIs
-            for seamless communication.
-          </p>
-          <p class="stack">Python | APIs | Automation</p>
-        </div>
-        <p class="meta">Automation / Alerts</p>
-      </article>
-
-      <article class="project reveal">
-        <div>
-          <h2>Reddit Data Scraper</h2>
-          <p>
-            Automated web scraper to collect Reddit posts for data analysis and NLP tasks,
-            enabling large-scale data collection for research.
-          </p>
-          <p class="stack">Python | Scrapy | Data Pipelines</p>
-        </div>
-        <p class="meta">Data Engineering</p>
-      </article>
-
-      <article class="project reveal">
-        <div>
-          <h2>Mapping a Pattern onto a Curved Surface</h2>
-          <p>
-            Graphics and geometry project implementing texture mapping onto curved 3D surfaces
-            using mathematical transformations.
-          </p>
-          <p class="stack">Python | Math | Geometry | Graphics</p>
-        </div>
-        <p class="meta">Graphics / Math</p>
-      </article>
-    </section>
-
-    <section id="experience" class="about reveal">
-      <p class="eyebrow">Experience</p>
-
-      <div class="experience-item">
-        <h3>Data Science Intern - Lumous Global Ventures</h3>
-        <p class="dates">Nov 2025 - Present</p>
-        <ul>
-          <li>Working on data science projects and analytics for global ventures.</li>
-          <li>Applying machine learning and statistical analysis to solve business problems.</li>
-          <li>Collaborating with cross-functional teams on data-driven solutions.</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <h3>Machine Learning Intern - Cognifyz Technologies</h3>
-        <p class="dates">Nov 2024 - Jan 2025</p>
-        <ul>
-          <li>Built and optimized machine learning models using Python, TensorFlow, and Scikit-learn for real-world use cases.</li>
-          <li>Worked on data preprocessing, feature engineering, model tuning, and evaluation.</li>
-          <li>Collaborated with team members on deep learning workflows and deployment-ready pipelines.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="about" class="about reveal">
-      <p class="eyebrow">About Me</p>
-      <p>
-        AI and Data Science student with experience in game development, software engineering,
-        and AI projects. Skilled in Python, C, Java, HTML, CSS, and Blender, with interest in
-        building smart applications through practical technical solutions.
-      </p>
-
-      <div class="split">
-        <div>
-          <h3>Core Skills</h3>
-          <ul>
-            <li>Data Science</li>
-            <li>Artificial Intelligence</li>
-            <li>Python Programming</li>
-            <li>Machine Learning</li>
-            <li>Flutter Development</li>
-            <li>Full Stack Development</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Languages</h3>
-          <ul>
-            <li>Tamil - Native</li>
-            <li>English - Intermediate</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact reveal">
-      <p class="eyebrow">Contact</p>
-      <h2>Open to AI/ML and software opportunities.</h2>
-      <div class="contact-links">
-        <a href="mailto:vikashvadivel1024@gmail.com">vikashvadivel1024@gmail.com</a>
-        <a href="tel:+919486831712">+91 9486831712</a>
-        <a href="https://www.linkedin.com/in/vikash-vr" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://github.com/vikashvr1024" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  backToTop.addEventListener('click', function (event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  });
+});
+</script></body></html>
